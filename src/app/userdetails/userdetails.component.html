@@ -1,0 +1,24 @@
+<div class="row">
+   <div class="col-6 mt-5 u">
+     <h2>Thank you {{user.acctname}}</h2>
+     <h5>for registering your onling banking. Please login with your username and password 
+       for enjoy our internet banking services</h5>
+   </div>
+
+   <div class="col-6 d">
+         <div *ngIf="details">
+                <h3>Profile</h3>
+                <div>
+                  <p>AcctNum:-{{user.accountnumber}}</p>
+                  <p>Branch:-{{user.branch}}</p>
+                  <p>Name:-{{user.acctname}}</p>
+                  <p>Aadhar:-{{user.aadhar}}</p>
+                  <p>Pan:-{{user.pan}}</p>
+                </div>
+         </div>
+         <div class="ud">
+           <p *ngIf="profile">To see your profile </p>
+           <button type="submit" class="btn btn-primary" (click)="show()">Click Here</button>
+         </div>
+   </div>
+</div>

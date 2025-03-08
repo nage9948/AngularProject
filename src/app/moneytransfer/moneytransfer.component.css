@@ -1,0 +1,26 @@
+.d{
+    text-align:center;
+    color: white;
+    padding-top: 10%;
+}
+.h{
+    cursor: pointer;
+}
+.head{
+    text-align: center;
+    color: white;
+}
+.money{
+    background-color:wheat;
+}
+h4,h6,h3{
+    color: black;
+}
+
+.table {
+    border: black solid 1px !important;
+    }
+ .b{
+        padding-top: 1%;
+        padding-left: 1%;
+}

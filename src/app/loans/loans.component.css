@@ -1,0 +1,16 @@
+h6{
+    text-align: center;
+    color:rgb(26, 26, 70);
+}
+.loan{
+    color:darkblue;
+}
+.d{
+    padding-left: 10%;
+}
+img:hover{
+    box-shadow: 60%;
+    cursor: pointer;
+    backdrop-filter: initial;
+    transform: scale(1.1);
+}

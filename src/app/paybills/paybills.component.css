@@ -1,0 +1,25 @@
+.power{
+    text-align:center;
+}
+.water{
+    text-align:center;
+    padding-top:3%;
+}
+.dth{
+    text-align:center;
+    padding-top:2%;
+}
+.emi{
+    text-align:center;
+    padding-top:2%;
+}
+.mbl{
+    text-align:center;
+    padding-top:1%;
+}
+img:hover{
+    box-shadow: 60%;
+    cursor: pointer;
+    backdrop-filter: initial;
+    transform: scale(1.15);
+}

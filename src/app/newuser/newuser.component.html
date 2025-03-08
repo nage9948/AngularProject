@@ -1,0 +1,74 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<div class="row">
+     <div class="col-sm-2">
+
+     </div>
+    <div class="col-3 ml-2 u">
+   <form #aboutForm="ngForm" (ngSubmit)="aboutForm.valid && onsubmit()">
+     <h2>Enter your details</h2>
+        <div class="form-group row">
+          <input type="text" name="user" [(ngModel)]="user.accountnumber" placeholder="Enter your Bank Account No:-" 
+          class="form-control" #accnum="ngModel" required/>
+          <div *ngIf="aboutForm.submitted">
+              <p *ngIf="accnum.invalid" class="text-danger">Account-Number is invalid</p>
+          </div>
+            
+        </div>
+
+        <div class="form-group row">
+            <input type="text" name="mobile" [(ngModel)]="user.branch" placeholder="Your Branch name" 
+            class="form-control" #branch="ngModel"  minlength="10" maxlength="10" required/>
+          </div>
+
+          <div class="form-group row">
+              <input type="email" email name="email" [(ngModel)]="user.acctname" placeholder="Account-holder name as per bank" 
+              class="form-control" #acctnam="ngModel" required/>
+            </div>
+
+            <div class="form-group row">
+              <input type="text" name="pass" [(ngModel)]="user.password" placeholder="Set Password" 
+              class="form-control" #pwd="ngModel" required/>
+            </div>
+
+            <div class="form-group row">
+              
+              <input type="text" name="cpass" [(ngModel)]="user.cpassword" placeholder="Confirm Password" 
+              class="form-control" #cpwd="ngModel" required/>
+            </div>
+
+            <div class="form-group row">
+              <input type="number" name="aadhar" [(ngModel)]="user.aadhar" placeholder="Enter your aadhar number" 
+              class="form-control" #aadhar="ngModel" required/>
+            </div>
+
+            <div class="form-group row">
+              <input type="number" name="mobile" [(ngModel)]="user.mobile" placeholder="Enter your mobile number" 
+              class="form-control" #mobile="ngModel" required/>
+            </div>
+
+            <div class="form-group row">
+              <input type="number" name="pan" [(ngModel)]="user.pan" placeholder="Enter your pan number" 
+              class="form-control" #pan="ngModel" required/>
+            </div>
+
+             <div class="form-group row">
+               <button type="submit" class="btn btn-primary" (click)="udetails()">Register</button>
+               <button type="reset" class="btn btn-secondary ml-1">Reset</button>
+
+
+             </div>
+   </form>
+   </div>
+   <div class="col-sm-1">
+
+   </div>
+   <div class="col-sm-5 wel">
+     <h2>MYBank</h2>
+     <h2>Welcome to new users</h2>
+     <h2>You will experience a great service from us...</h2>
+   </div>
+   </div>
+   

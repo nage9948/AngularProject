@@ -1,0 +1,28 @@
+.menu{
+    background-color: lightpink;
+    border-color: #E7E7E7;
+}
+h6{
+    color: aquamarine;
+}
+h5{
+    color: greenyellow;
+}
+/* .fluid-container{
+    background-image: url('F:\visual\angular documents\MyBank\src\assets\myb2.png')
+} */
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+
+  .fa:hover {
+    opacity: 0.6;
+  }
+a{
+    cursor: pointer;
+}

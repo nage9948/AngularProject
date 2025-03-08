@@ -1,0 +1,28 @@
+.fluid-container{
+    background-color: rgb(177, 209, 34);
+    width: 100%;
+    text-align: center;
+}
+.logo{
+    width:2%;
+    height:2%;
+}
+h3{
+    text-align: center;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+
+  .fa:hover {
+    opacity: 0.6;
+  }
+a{
+    cursor: pointer;
+}

@@ -1,0 +1,173 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<div class="money">
+<div class="row">
+  <div *ngIf="sear">
+  <div class="col-xs-1 ml-2 h">
+    <a class="nav-link" href="javascript" uiSref="home" class="fa fa-home fa-3x"></a>
+  </div>
+  </div>
+  <div class="col-xs-3 ml-2">
+      <div *ngIf="fo">
+    <h3>Please Enter Beneficiary Details</h3>
+    <div class="input-group mb-3 input-group-sm">
+      <div class="input-group-prepend">
+        <span class="input-group-text">BeneficiaryAcctNum:-</span>
+      </div>
+      <input type="number" name="user" class="form-control" [(ngModel)]="b.acctnum" minlength="6" maxlength="10"
+        required />
+    </div>
+
+    <div class="input-group mb-3 input-group-sm">
+      <div class="input-group-prepend">
+        <span class="input-group-text">BeneficiaryMobNum:-</span>
+      </div>
+      <input type="number" name="user" class="form-control" [(ngModel)]="b.mnum" minlength="6" maxlength="10" required />
+    </div>
+
+
+    <div class="input-group mb-3 input-group-sm">
+      <div class="input-group-prepend">
+        <span class="input-group-text">BeneficiaryName:-</span>
+      </div>
+      <input type="text" name="user" class="form-control" [(ngModel)]="b.name" minlength="6" maxlength="10" required />
+    </div>
+
+    <div class="input-group mb-3 input-group-sm">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Banks's Branch:-</span>
+      </div>
+      <input type="text" name="user" class="form-control" [(ngModel)]="b.branch" minlength="6" maxlength="10" required />
+    </div>
+
+    <div class="input-group mb-3 input-group-sm">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Bank's IFSC Code :-</span>
+      </div>
+      <input type="text" name="user" class="form-control" [(ngModel)]="b.ifsc" minlength="6" maxlength="10" required />
+    </div>
+
+    <div class="input-group mb-3 input-group-sm">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Enter Money in INR:-</span>
+      </div>
+      <input type="number" name="user" class="form-control" [(ngModel)]="b.amount" minlength="4" maxlength="10"
+        required />
+    </div>
+
+    <div class="input-group mb-3 input-group-sm">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Description for transaction:-</span>
+      </div>
+      <input type="text" name="user" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="transfer()">Transfer</button>
+  </div>
+  </div>
+
+
+  <div class="col-2">
+
+  </div>
+
+  <div class="col-4 ml-1 ">
+    <div *ngIf="transaction">
+      <div class="d">
+      <h4>Thank you, Successfully you transfered Rs.{{b.amount}} to {{b.name}}.
+        We are waiting for your next visit..
+      </h4>
+      <h6>Remaining balance is:- Rs{{balance}}</h6>
+      <h3>Do you want to download Receipt click below</h3>
+      <button type="submit" class="btn-secondary" (click)="receipt()">receipt</button>
+    </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="row ">
+     <div class="col-3">
+
+     </div>
+     <div class="col-xs-6 ml-4 t">
+         <div *ngIf="rec">
+           <div class="head">
+             <h5>Transaction Details</h5>
+           </div><br>
+            <table class="table table-sm  border border-primary">
+                <tr>
+                  <td>Transfer Tyte</td>
+                  <td>NEFT</td>
+                </tr>
+
+                <tr>
+                    <td>From account-num</td>
+                    <td>23464956464</td>
+                  </tr>
+
+                  <tr>
+                      <td>To account-num </td>
+                      <td>{{b.acctnum}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>BeneficiaryName</td>
+                        <td>{{b.name}}</td>
+                      </tr>
+
+                      <tr>
+                          <td>BeneficiaryMobNum</td>
+                          <td>{{b.mnum}}</td>
+                      </tr>
+
+                      <tr>
+                          <td>Beneficiary's IFSC code</td>
+                          <td>{{b.ifsc}}</td>
+                      </tr>
+
+                      <tr>
+                          <td>Beneficiary's Bank name</td>
+                          <td>SBI</td>
+                      </tr>
+
+                      <tr>
+                          <td>Beneficiary's Bank's Branch</td>
+                          <td>{{b.ifsc}}</td>
+                      </tr>
+
+                      <tr>
+                          <td>Transfer Amount</td>
+                          <td>{{b.amount}}</td>
+                      </tr>
+
+                      <tr>
+                          <td>Transaction Id</td>
+                          <td>{{num}}</td>
+                      </tr>
+
+                      <tr>
+                          <td>Transaction Date</td>
+                          <td>{{date|date:"dd|MM|yyyy|hh|mm|ss"}}</td>
+                      </tr>
+
+                      <tr>
+                          <td>Status</td>
+                          <td>Success</td>
+                      </tr>
+
+            </table>
+         </div>
+         </div>
+         <div class="col-xs-3 mt-5 b">
+           <div *ngIf="but">
+              <button type="submit" class="btn btn-primary">download</button>
+              <button type="submit" class="btn btn-secondary ml-2">Print</button>
+          </div>
+         </div>
+</div>
+</div>
+
+
+         

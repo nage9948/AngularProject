@@ -1,0 +1,181 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<div *ngIf="image">
+<div class="loan">
+  <marquee scrollamount="10">
+    <h3>MyBank offers wide variety of Loans to suit your requirements</h3>
+  </marquee>
+</div>
+<div class="row">
+  <div class="col-2 mt-3 emi">
+    <div class="">
+      <img class="power" src="assets/home.png" height="100%" width="100%" alt="Home-Loans" /><br>
+      <h6>Home-Loans</h6>
+    </div>
+  </div>
+  <div class="col-2 mt-3 emi">
+    <div class="mt-2">
+      <img class="power" src="assets/personal.png" height="85%" width="80%" alt="Personal-Loans" /><br>
+      <h6>Personal-Loans</h6>
+    </div>
+  </div>
+
+
+  <div class="col-2 mt-3 emi">
+    <div class="">
+      <img class="power" src="assets/business.png" height="83%" width="80%" alt="Business-Loans" /><br>
+      <h6>Business-Loans</h6>
+    </div>
+  </div>
+
+  <div class="col-2 mt-3 emi">
+    <div class="">
+      <img class="power" src="assets/car.png" height="80%" width="80%" alt="Vehicle-Loans" /><br>
+      <h6>Car-Loans</h6>
+    </div>
+  </div>
+
+  <div class="col-2 mt-3 emi">
+    <div class="">
+      <img class="power" src="assets/gold.png" height="80%" width="80%" alt="Vehicle-Loans" /><br>
+      <h6>Gold-Loans</h6>
+    </div>
+  </div>
+
+  <div class="col-2 mt-3 emi">
+    <div class="">
+      <img class="power" src="assets/two.png" height="60%" width="60%" alt="Vehicle-Loans" /><br>
+      <h6>Two Wheeler-Loans</h6>
+    </div>
+  </div>
+</div>
+<hr>
+</div>
+<div class="row">
+  <div class="col-5 d">
+    <form>
+      <div *ngIf="am">
+        <div class="form-group row">
+          <div class="input-group mb-3 input-group-sm">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Gross-income:-</span>
+            </div>
+            <input type="number" name="user" [(ngModel)]="user.sal" class="form-control" #username="ngModel" minlength="6"
+              maxlength="10" required />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="input-group mb-3 input-group-sm">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Profession:-</span>
+            </div>
+            <input type="text" name="user" [(ngModel)]="user.Profession" class="form-control" #username="ngModel"
+              minlength="6" maxlength="10" required />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="check()">submit</button>
+        <button type="reset" class="btn btn-secondary ml-2">reset</button>
+      </div>
+
+      <div *ngIf="ne">
+        <h4  style="color:black;">Sorry your gross income is not sufficient for giving loan..</h4>
+      </div>
+      <div *ngIf="e">
+        <div>
+            <div class="form-group row">
+              <h5>Loan Application</h5>
+                <div class="input-group mb-2 input-group-sm">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Type of loan:-</span>
+                  </div>
+                  <input type="text" name="user" [(ngModel)]="user.ltype" class="form-control" #username="ngModel"
+                    minlength="6" maxlength="10" required />
+                </div>
+              </div>
+        </div>
+        <div>
+            <div class="form-group row">
+                <div class="input-group mb-2 input-group-sm">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Amount required:-</span>
+                  </div>
+                  <input type="number" name="user" [(ngModel)]="user.la" class="form-control" #username="ngModel"
+                    minlength="6" maxlength="10" required />
+                </div>
+              </div>
+        </div>
+
+        <div>
+            <div class="form-group row">
+                <div class="input-group mb-2 input-group-sm">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Aadhar:-</span>
+                  </div>
+                  <input type="file" name="user"  class="form-control" required />
+                </div>
+              </div>
+        </div>
+
+        <div>
+            <div class="form-group row">
+                <div class="input-group mb-2 input-group-sm">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Income proof:-</span>
+                  </div>
+                  <input type="file" name="user"  class="form-control" required />
+                </div>
+              </div>
+        </div>
+
+        <div>
+            <div class="form-group row">
+                <div class="input-group mb-2 input-group-sm">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Residence:-</span>
+                  </div>
+                  <input type="file" name="user"  class="form-control" required />
+                </div>
+              </div>
+        </div>
+
+        <div>
+            <div class="form-group row">
+                <div class="input-group mb-2 input-group-sm">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Bank Statement:-</span>
+                  </div>
+                  <input type="file" name="user"  class="form-control" required />
+                </div>
+              </div>
+        </div>
+
+        <div>
+            <div class="form-group row">
+                <div class="input-group mb-2 input-group-sm">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Photograph:-</span>
+                  </div>
+                  <input type="file" name="user"  class="form-control" required />
+                </div>
+              </div>
+        </div>
+
+        <div>
+            <div class="form-group row">
+                <div class="input-group mb-2 input-group-sm">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Signature:-</span>
+                  </div>
+                  <input type="file" name="user"  class="form-control" required />
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Apply</button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>

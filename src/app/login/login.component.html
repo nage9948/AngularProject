@@ -1,0 +1,107 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<div class="bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-3">
+
+        <div class="card mt-5 ml-5" style="width: 18rem;">
+          <img class="card-img-top" src="assets\hm3.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text"><span STYLE="color: green; font-size: 11pt">Why Choose MyBank Home Loans?</span>
+              <span STYLE="font-size: 10pt">Attractive interest rates to make your Home Loans affordable and easier on
+                your pocket.
+                Customized repayment options to suit your needs.
+                No hidden charges.
+                Expert legal and technical counseling to help you make the right home buying decision.</span></p>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="col-xs-5 ml-5 animation">
+        <P>Welcome to MyBank</P>
+      </div>
+
+      <!-- <div class="col-xs-3 ml-4">
+      <div class="login">
+        <form #loginform="ngForm" (ngSubmit)="loginform.valid && onSubmit()">
+          <div class="form-group row">
+            <div class="input-group mb-3 input-group-sm">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Username:-</span>
+              </div>
+              <input type="text" name="user" [(ngModel)]="usern.name" class="form-control" #username="ngModel" minlength="6"
+                maxlength="10" required />
+            </div>
+            <div *ngIf="loginform.submitted">
+              <p *ngIf="username.errors?.required" class="text-danger">Username is required</p>
+              <p *ngIf="username.errors?.minlength" class="text-danger">Username should have minimum 6 characters</p>
+            </div>
+          </div>
+
+          <div class="form-group row ">
+            <div class="input-group mb-0 input-group-sm">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Password:-</span>
+              </div>
+              <input type="password" name="pwd" [(ngModel)]="user.pwd" minlength="4" maxlength="10" class="form-control"
+                #passwd="ngModel" required />
+            </div>
+            <div *ngIf="loginform.submitted">
+              <p *ngIf="passwd.invalid" class="text-danger">Password is required</p>
+            </div>
+          </div>
+
+
+          <div>
+            <button type="submit" class="btn btn-primary ml-0">Submit</button>
+            <button type="reset" class="btn btn-secondary ml-1">Reset</button>
+          </div>
+          
+        </form>
+      </div>
+    </div> -->
+  
+      <div class="col-xs-3 ml-4 l">
+          <div *ngIf="us">
+            <div>
+              <h3>loginform</h3>
+            </div>
+            <div class="input-group mb-3 input-group-sm">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Username:-</span>
+              </div>
+              <input type="text" name="user" [(ngModel)]="usern.name" class="form-control" #username="ngModel"
+                minlength="6" maxlength="10" required />
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="usn()">GO</button><br><br>
+            <div>
+              New User?? <br>
+              <button type="button" class="mt-0" (click)="register()">Register</button>
+            </div>
+          </div>
+
+          <div *ngIf="pw">
+              <div class="input-group mb-3 input-group-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Password:-</span>
+                </div>
+                <input type="text" name="user" [(ngModel)]="usern.pwd" class="form-control" #username="ngModel"
+                  minlength="6" maxlength="10" required />
+              </div>
+              <button type="submit" class="btn btn-primary" (click)="pwd()">Submit</button><br><br>
+              <div class="click">
+                Forgot Password?? <br>
+                <button type="button" class="mt-0">ClickHere</button>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+     
+  
